@@ -36,8 +36,8 @@ class Celsius
     @temperature = temperature
   end
 
-  def to_fahrenheit(temperature_c)
-    temperature_f = (temperature_c * 1.8) + 32
+  def to_fahrenheit
+    temperature_f = (@temperature * 1.8) + 32
   end
 end
 
@@ -60,12 +60,12 @@ class Celsius
     @temperature = temperature
   end
 
-  def to_fahrenheit(temperature_c)
-    temperature_f = (temperature_c * 1.8) + 32
+  def to_fahrenheit
+    temperature_f = (@temperature * 1.8) + 32
   end
 
-  def is_hot?(temperature_c)
-    if temperature_c >=40
+  def is_hot?
+    if @temperature >=40
       "It's hotter than a jalapeno!"
     else
       "Seems perfectly fine to me."
@@ -93,20 +93,20 @@ class Celsius
     @temperature = temperature
   end
 
-  def to_fahrenheit(temperature_c)
-    temperature_f = (temperature_c * 1.8) + 32
+  def to_fahrenheit
+    temperature_f = (@temperature * 1.8) + 32
   end
 
-  def is_hot?(temperature_c)
-    if temperature_c >=40
+  def is_hot?
+    if @temperature >=40
       "It's hotter than a jalapeno!"
     else
       "Seems perfectly fine to me."
     end
   end
 
-  def report(temperature_c)
-    "The temperature is #{temperature_c} Celsius or #{to_fahrenheit(temperature_c)} Fahrenheit."
+  def report
+    "The temperature is #{temperature_c} Celsius or #{to_fahrenheit(@temperature)} Fahrenheit."
   end
 end
 
@@ -124,8 +124,5 @@ end
 
 
 temp_in_room = Celsius.new(22)
-temp_in_room.is_hot?(22)
-
-
-
+temp_in_room.is_hot?
 
