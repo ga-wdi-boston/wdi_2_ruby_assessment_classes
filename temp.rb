@@ -4,7 +4,7 @@ require 'pry'
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
 
-# Question 1
+# Question 1  ---  CORRECT
 # Create a class called Celsius.
 # You should be able to initialize a new instance of this
 # class with a given temperature.
@@ -16,12 +16,11 @@ class Celsius
   end
 end
 
-
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
 
-# Question 2
+# Question 2  ---  CORRECT
 # Paste your class definition from Question 1.
 # Write an instance method for this class.
 # This method is called to_fahrenheit. It takes a temperature
@@ -35,6 +34,8 @@ class Celsius
 
   def to_fahrenheit
     (@temp_c * 1.8) + 32
+    # Optional: include an instance variable to hold the result; would be accessible to all other class methods.
+        # @temp_f = (@temp_c * 1.8) + 32
   end
 end
 
@@ -42,7 +43,7 @@ end
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
 
-# Question 3
+# Question 3  ---  CORRECT
 # Paste your answer from Question 2 below.
 # Write another instance method for this class.
 # This method is called is_hot?. It takes a temperature
@@ -72,7 +73,7 @@ end
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
 
-# Question 4
+# Question 4  ---  CORRECT
 # Paste your answer from Question 3 below.
 # Write another instance method for this class.
 # This method is called report. It takes a temperature
@@ -101,6 +102,10 @@ class Celsius
 
   def report
     "The current temperature is #{@temp_c} Celsius or #{self.to_fahrenheit} Fahrenheit."
+    # SAME AS ABOVE:
+    # "The current temperature is #{@temp_c} Celsius or #{to_fahrenheit} Fahrenheit."
+    # "The current temperature is #{@temp_c} Celsius or #{@temp_f} Fahrenheit."
+    # "The current temperature is #{@temp_c} Celsius or #{self.to_fahrenheit} Fahrenheit."  --  This is more explicit in the sense that you are saying the method is specifically acted on "self". Helps ensure it uses the method on the class.
   end
 end
 
@@ -109,16 +114,14 @@ end
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
 
-# Question 5
+# Question 5  ---  CORRECT
 # Create a new instance of the Celsius class
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
 temp_in_room = Celsius.new(22)
-
 temp_in_room.is_hot?
 
 
-
-
+binding.pry
 
