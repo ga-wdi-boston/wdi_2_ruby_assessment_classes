@@ -30,8 +30,8 @@ class Celsius
   def initialize(temperature)
   end
 
-  def to_fahrenheit(celcius_temp)
-    (celcius_temp * 1.8) + 32
+  def to_fahrenheit(celsius_temp)
+    (celsius_temp * 1.8) + 32
   end
 end
 
@@ -51,12 +51,12 @@ class Celsius
   def initialize(temperature)
   end
 
-  def to_fahrenheit(celcius_temp)
-    (celcius_temp * 1.8) + 32
+  def to_fahrenheit(celsius_temp)
+    (celsius_temp * 1.8) + 32
   end
 
-  def is_hot?(celcius_temp)
-    celcius_temp >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
+  def is_hot?(celsius_temp)
+    celsius_temp >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
   end
 end
 
@@ -74,11 +74,21 @@ end
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+class Celsius
+  def initialize(temperature)
+  end
 
+  def to_fahrenheit(celcius_temp)
+    (celcius_temp * 1.8) + 32
+  end
 
+  def is_hot?(celcius_temp)
+    celcius_temp >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
+  end
 
-
-
+  def report(celsius_temp)
+    puts "The temperature is #{celsius_temp} Celsius or #{to_fahrenheit(celsius_temp)} Fahrenheit."
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
