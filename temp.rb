@@ -40,7 +40,7 @@ class Celsius
     @temperature = temperature
   end
 
-  def to_ferenheit(temperature)
+  def to_ferenheit
     (temperature * 1.8) + 32
   end
 end
@@ -69,11 +69,11 @@ class Celsius
     @temperature = temperature
   end
 
-  def to_ferenheit(temperature)
+  def to_ferenheit
     (temperature * 1.8) + 32
   end
 
-  def is_hot?(temperature)
+  def is_hot?
     if temperature >= 40
       "It's hotter than a jalapeno!"
     else
@@ -108,11 +108,11 @@ class Celsius
     @temperature = temperature
   end
 
-  def to_ferenheit(temperature)
+  def to_ferenheit
     (temperature * 1.8) + 32
   end
 
-  def is_hot?(temperature)
+  def is_hot?
     if temperature >= 40
       "It's hotter than a jalapeno!"
     else
@@ -120,7 +120,7 @@ class Celsius
     end
   end
 
-  def report(temperature)
+  def report
     celsius = temperature
     ferenheit = to_ferenheit(temperature)
 
@@ -146,17 +146,17 @@ end
 
 
 class Celsius
-  attr_accessor :to_ferenheit, :is_hot?, :report
+  attr_accessor :temperature, :to_ferenheit, :report#:is_hot?
 
   def initialize(temperature)
     @temperature = temperature
   end
 
-  def to_ferenheit(temperature)
+  def to_ferenheit
     (temperature * 1.8) + 32
   end
 
-  def is_hot?(temperature)
+  def is_hot
     if temperature >= 40
       "It's hotter than a jalapeno!"
     else
@@ -164,9 +164,9 @@ class Celsius
     end
   end
 
-  def report(temperature)
+  def report
     celsius = temperature
-    ferenheit = to_ferenheit(temperature)
+    ferenheit = to_ferenheit
 
     "The temperature is #{celsius} Celsius or #{ferenheit} Ferenheit "
   end
@@ -174,5 +174,5 @@ end
 
 temp_in_room = Celsius.new 22
 temp_in_room.is_hot?
-
+binding.pry
 
