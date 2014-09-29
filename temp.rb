@@ -16,6 +16,14 @@ class Celsius
 end
 end
 
+# BOARD ANSWER
+#classes Celsius
+def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+end
+
+
 
 
 
@@ -41,6 +49,18 @@ end
 def to_farenheit(temp)
   @temp = temp
   F = (temp * 1.8) + 32
+end
+
+#BOARD ANSWER
+classes Celsius
+
+def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+
+def to_fahrenheit
+  @temp_in_f = (@temp_in_c * 1.8) + 32
+end
 end
 
 
@@ -79,6 +99,28 @@ def is_hot(temp)
     if temp >= 40 puts "It's hotter than a jalapeno!"
     else puts "Seems perfectly fine to me."
     end
+end
+
+
+# BOARD
+# classes Celsius
+
+def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+
+def to_fahrenheit
+  @temp_in_f = (@temp_in_c * 1.8) + 32
+end
+end
+
+def is_hot?
+  if @temp_in_c >=40
+    "It's hotter than a jalapeno"
+  else
+    "Seems perfectly fine to me"
+  end
+end
 end
 
 
@@ -122,6 +164,32 @@ def report(temp)
 end
 
 
+ # BOARD ANSWER
+
+  def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+
+def to_fahrenheit
+  @temp_in_f = (@temp_in_c * 1.8) + 32
+end
+end
+
+def is_hot?
+  if @temp_in_c >=40
+    "It's hotter than a jalapeno"
+  else
+    "Seems perfectly fine to me"
+  end
+
+def report
+  "The temperature is #{@temp_in_c} Celsius or #{to_fahrenheit} Fahrenheit.
+  "
+end
+end
+end
+
+
 
 
 ########################################################
@@ -133,7 +201,8 @@ end
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
-
+temp_in_room = Celsius(22)
+temp_in_room.is_hot?
 
 
 
