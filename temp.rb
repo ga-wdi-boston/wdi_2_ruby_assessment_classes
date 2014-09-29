@@ -20,7 +20,7 @@ class Celsius
 end
 
 
-
+# correct
 
 
 ########################################################
@@ -47,6 +47,7 @@ class Celsius
 
 end
 
+# correct
 
 
 ########################################################
@@ -81,7 +82,7 @@ class Celsius
 
 end
 
-
+# correct
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -123,6 +124,11 @@ class Celsius
 
 end
 
+# incorrect (did not have time to finish); solution would be:
+# def report
+#    "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
+#  end
+
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -138,5 +144,5 @@ temp_in_room = Celsius.new(22)
 temp_in_room.is_hot?
 
 
-
+# correct
 
