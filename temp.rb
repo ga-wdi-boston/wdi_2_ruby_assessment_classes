@@ -10,10 +10,11 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
-
-
-
-
+class Celsius
+  def initialize(temp_c)
+    @temp_c = temp_c
+  end
+end
 
 
 ########################################################
@@ -27,12 +28,15 @@ require 'pry'
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+class Celsius
+  def initialize(temp_c)
+    @temp_c = temp_c.to_i
+  end
 
-
-
-
-
-
+  def to_fahrenheit
+    (@temp_c * 1.8) + 32
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -46,10 +50,23 @@ require 'pry'
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+class Celsius
+  def initialize(temp_c)
+    @temp_c = temp_c.to_i
+  end
 
+  def to_fahrenheit
+    (@temp_c * 1.8) + 32
+  end
 
-
-
+  def is_hot?
+    if @temp_c >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -65,10 +82,27 @@ require 'pry'
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+class Celsius
+  def initialize(temp_c)
+    @temp_c = temp_c.to_i
+  end
 
+  def to_fahrenheit
+    (@temp_c * 1.8) + 32
+  end
 
+  def is_hot?
+    if @temp_c >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
 
-
+  def report
+    "The current temperature is #{@temp_c} Celsius or #{self.to_fahrenheit} Fahrenheit."
+  end
+end
 
 
 ########################################################
@@ -80,7 +114,9 @@ require 'pry'
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
+temp_in_room = Celsius.new(22)
 
+temp_in_room.is_hot?
 
 
 
