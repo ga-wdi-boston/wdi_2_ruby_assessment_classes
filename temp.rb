@@ -10,7 +10,12 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+class Celcius
 
+  def initialize(temp)
+    @temp = temp
+  end
+end
 
 
 
@@ -27,7 +32,16 @@ require 'pry'
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+class Celcius
 
+  def initialize(temp)
+    @temp = temp
+  end
+
+  def to_fahrenheit(c)
+    f = (c * 1.8) + 32
+  end
+end
 
 
 
@@ -46,6 +60,24 @@ require 'pry'
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+class Celcius
+
+  def initialize(temp)
+    @temp = temp
+  end
+
+  def to_fahrenheit(c)
+    f = (c * 1.8) + 32
+  end
+
+  def is_hot?(c)
+    if c > 40
+      return "It's hotter than a jalapeno!"
+    else
+      return "Seems perfectly fine to me."
+    end
+  end
+end
 
 
 
@@ -65,7 +97,29 @@ require 'pry'
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+class Celsius
 
+  def initialize(c)
+    @c = c
+  end
+
+  def to_fahrenheit
+    f = (@c * 1.8) + 32
+  end
+
+  def is_hot?
+    if @c > 40
+      return "it's hotter than a jalapeno!"
+    else
+      return "Seems perfectly fine to me."
+    end
+  end
+
+  def report
+    return "The temperature is " + @c + " or " + @c.to_fahrenheit + " Fahrenheit."
+  end
+
+end
 
 
 
@@ -80,8 +134,9 @@ require 'pry'
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
-
-
+temp_in_room = Celsius.new(22)
+hot = Celsius.is_hot?
+binding.pry
 
 
 
