@@ -34,7 +34,7 @@ end
 # The formula is F = (C * 1.8) + 32
 
 class Celsius
-    attr_accessor :to_ferenheit
+    attr_accessor :to_ferenheit, :temperature #added :temperature
 
   def initialize(temperature)
     @temperature = temperature
@@ -63,7 +63,7 @@ end
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 class Celsius
-  attr_accessor :to_ferenheit, :is_hot?
+  attr_accessor :to_ferenheit, :is_hot, :temperature #added :temperature
 
   def initialize(temperature)
     @temperature = temperature
@@ -73,7 +73,7 @@ class Celsius
     (temperature * 1.8) + 32
   end
 
-  def is_hot?
+  def is_hot
     if temperature >= 40
       "It's hotter than a jalapeno!"
     else
@@ -102,8 +102,8 @@ end
 # in Question 2.
 
 class Celsius
-  attr_accessor :to_ferenheit, :is_hot?, :report
-
+  attr_accessor :to_ferenheit, :is_hot, :report, :temperature #added :temperature
+                #I don't think I needed anything in attr_accessor other than :temperature and to_ferenheit
   def initialize(temperature)
     @temperature = temperature
   end
@@ -112,7 +112,7 @@ class Celsius
     (temperature * 1.8) + 32
   end
 
-  def is_hot?
+  def is_hot
     if temperature >= 40
       "It's hotter than a jalapeno!"
     else
@@ -125,6 +125,7 @@ class Celsius
     ferenheit = to_ferenheit(temperature)
 
     "The temperature is #{celsius} Celsius or #{ferenheit} Ferenheit "
+    #could have done: "The temperature is #{celsius} Celsius or #{self.to_ferenheit} Ferenheit "
   end
 
 
@@ -135,6 +136,8 @@ end
 
 
 ########################################################
+
+
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
 
@@ -146,7 +149,7 @@ end
 
 
 class Celsius
-  attr_accessor :temperature, :to_ferenheit, :report#:is_hot?
+  attr_accessor :temperature, :to_ferenheit, :report#, :is_hot didn't need :is_hot
 
   def initialize(temperature)
     @temperature = temperature
@@ -173,6 +176,6 @@ class Celsius
 end
 
 temp_in_room = Celsius.new 22
-temp_in_room.is_hot?
+temp_in_room.is_hot
 binding.pry
 
