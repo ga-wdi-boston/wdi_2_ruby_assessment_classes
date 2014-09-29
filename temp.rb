@@ -1,4 +1,4 @@
-require 'pry'
+require 'pry-nav'
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -10,6 +10,8 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+
+# first answer
 class Celsius
 
   def initialize(num)
@@ -18,6 +20,13 @@ class Celsius
 end
 
 
+# notes
+# —————————————————————
+=begin
+
+  CORRECT...I just used a generic "num" parameter, probably should have used a more specific parameter name
+
+=end
 
 
 
@@ -33,6 +42,9 @@ end
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+
+# first answer
+# ———————————————————
 class Celsius
 
   def initialize(num)
@@ -44,8 +56,11 @@ class Celsius
   end
 end
 
-
-
+# notes
+# ————————————————————
+=begin
+  CORRECT
+=end
 
 
 
@@ -63,6 +78,8 @@ end
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+# first answer
+# ————————————————————
 class Celsius
 
   def initialize(num)
@@ -78,7 +95,13 @@ class Celsius
   end
 end
 
+# notes
+# ————————————————————
+=begin
 
+  CORRECT, Used ternary operation to output the result
+
+=end
 
 
 
@@ -96,6 +119,8 @@ end
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+# first answer
+# ————————————————————
 class Celsius
 
   def initialize(num)
@@ -113,11 +138,22 @@ class Celsius
   def report
     "The temperature is #{@num} Celsius or #{to_fahrenheit} Fahrenheit."
   end
+
 end
 
 
+# notes
+# ————————————————————
+=begin
+  CORRECT, string interpolation!! hooray, methods calling other methods, hooray!!
+  this is so much fun.
 
 
+  could also use: "The temperature is #{@num} Celsius or #{self.to_fahrenheit} Fahrenheit."
+
+  self.method_name => "self" refers to the initialized instance of the class
+
+=end
 
 
 ########################################################
@@ -133,6 +169,10 @@ temp_in_room = Celsius.new(22)
 temp_in_room.to_fahrenheit #=>71.6
 temp_in_room.is_hot? #=> Seems perfectly fine to me.
 temp_in_room.report #=> The temperature is 22 Celsius or 71.6 Fahrenheit.
+
+# notes
+# —————————————————————
+# CORRECT
 
 
 # —————————————————————————————————————————————————————————————————————— #
