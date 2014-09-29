@@ -12,6 +12,7 @@ require 'pry'
 
 class Celsius
   def initialize(temperature)
+    @temperature = temperature
   end
 end
 
@@ -28,6 +29,7 @@ end
 
 class Celsius
   def initialize(temperature)
+    @temperature = temperature
   end
 
   def to_fahrenheit(celsius_temp)
@@ -49,6 +51,7 @@ end
 
 class Celsius
   def initialize(temperature)
+    @temperature = temperature
   end
 
   def to_fahrenheit(celsius_temp)
@@ -76,14 +79,15 @@ end
 
 class Celsius
   def initialize(temperature)
+    @temperature = temperature
   end
 
-  def to_fahrenheit(celcius_temp)
-    (celcius_temp * 1.8) + 32
+  def to_fahrenheit(celsius_temp)
+    (celsius_temp * 1.8) + 32
   end
 
-  def is_hot?(celcius_temp)
-    celcius_temp >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
+  def is_hot?(celsius_temp)
+    celsius_temp >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
   end
 
   def report(celsius_temp)
@@ -99,7 +103,8 @@ end
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
-
+temp_in_room = Celsius.new(22)
+temp_in_room.is_hot?
 
 
 
