@@ -1,4 +1,4 @@
-# require 'pry'
+require 'pry'
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -11,7 +11,6 @@
 # This class shouldn't contain anything else yet.
 
 class Celsius
-
   def initialize(temperature)
     @temperature = temperature
   end
