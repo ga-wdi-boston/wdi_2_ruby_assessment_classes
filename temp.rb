@@ -11,9 +11,16 @@ require 'pry'
 # This class shouldn't contain anything else yet.
 
 
+class Celsius
+
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+end
 
 
-
+# correct
 
 
 ########################################################
@@ -28,10 +35,19 @@ require 'pry'
 # The formula is F = (C * 1.8) + 32
 
 
+class Celsius
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    temperature = (@temperature.to_f * 1.8) + 32
+  end
 
+end
 
+# correct
 
 
 ########################################################
@@ -46,10 +62,27 @@ require 'pry'
 # "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+class Celsius
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    temperature = (@temperature.to_f * 1.8) + 32
+  end
 
+  def is_hot?
+    if @temperature.to_f >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
 
+end
+
+# correct
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -65,9 +98,35 @@ require 'pry'
 # in Question 2.
 
 
+class Celsius
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    temperature = (@temperature.to_f * 1.8) + 32
+  end
 
+  def is_hot?
+    if @temperature.to_f >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+
+  def report
+    @temperature.to_fahrenheit
+    "The temperature is #{temperature.to_f} Celsius or #{temperature_f} Fahrenheit."
+  end
+
+end
+
+# incorrect (did not have time to finish); solution would be:
+# def report
+#    "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
+#  end
 
 
 ########################################################
@@ -80,8 +139,9 @@ require 'pry'
 # Call the is_hot? method on that instance. Don't use puts.
 
 
+temp_in_room = Celsius.new(22)
+temp_in_room.is_hot?
 
 
-
-
+# correct
 
