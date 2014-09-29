@@ -31,8 +31,8 @@ class Celsius
   def initialize(temperature)
     @temperature = temperature
   end
-  def to_fahrenheit(celsius)
-    fahrenheit = (celsius * 1.8) + 32
+  def to_fahrenheit(temperature)
+    fahrenheit = (temperature * 1.8) + 32
   end
 end
 
@@ -48,10 +48,17 @@ end
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
-
-
-
-
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+  def to_fahrenheit(temperature)
+    fahrenheit = (temperature * 1.8) + 32
+  end
+  def is_hot?(temperature)
+    temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -67,11 +74,20 @@ end
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
-
-
-
-
-
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+  def to_fahrenheit(temperature)
+    fahrenheit = (temperature * 1.8) + 32
+  end
+  def is_hot?(temperature)
+    temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
+  end
+  def report(temperature)
+    "The temperature is #{temperature} Celsius, or #{self.to_fahrenheit(temperature)} Fahrenheit."
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
