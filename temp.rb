@@ -11,7 +11,7 @@ require 'pry'
 # This class shouldn't contain anything else yet.
 
 class Celsius
-  def initialize(temperature)
+  def initialize(temperature)  ## it's clearer if instead of just temperature, say argument as temp_in_c
   @temperature = temperature
   end
 end
@@ -38,7 +38,10 @@ class Celsius
   end
 
   def to_fahrenheit
-    @temperature = (@temperature * 1.8) + 32
+    @temperature = (@temperature * 1.8) + 32  ## "@temperature = " is optional
+    ## better to change the first @temperature to a different name to avoid confusion
+    ## eg. @temp_in_f = (@temperature * 1.8) + 32
+
   end
 
 end
@@ -74,6 +77,7 @@ class Celsius
       "It's hotter than a jalapeno!"
     else
       "Seems perfectly fine to me."
+    end
   end
 
 end
@@ -113,6 +117,9 @@ class Celsius
 
   def report
     "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
+    # "The temperature is #{@temperature} Celsius or #{self.to_fahrenheit} Fahrenheit."
+    # "The temperature is #{@temperature} Celsius or #{@temp_in_f} Fahrenheit."
+    # binding.pry
   end
 
 end
