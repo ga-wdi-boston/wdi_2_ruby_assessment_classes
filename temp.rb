@@ -36,8 +36,8 @@ class Celsius
 		@temp = temperature
 	end
 
-	def to_fahrenheit(temperature_in_celsius)
-		return (temperature_in_celsius * 1.8) + 32
+	def to_fahrenheit
+		return (@temp * 1.8) + 32
 	end
 end
 
@@ -65,12 +65,12 @@ class Celsius
 		@temp = temperature
 	end
 
-	def to_fahrenheit(temperature_in_celsius)
-		return (temperature_in_celsius * 1.8) + 32
+	def to_fahrenheit
+		return (@temp * 1.8) + 32
 	end
 
-	def is_hot?(temperature_in_celsius)
-		if temperature_in_celsius >= 40
+	def is_hot?
+		if @temp >= 40
 			"It's hotter than a jalapeno!"
 		else
 			"Seems perfectly fine to me."
@@ -100,20 +100,20 @@ class Celsius
 		@temp = temperature
 	end
 
-	def to_fahrenheit(temperature_in_celsius)
-		return (temperature_in_celsius * 1.8) + 32
+	def to_fahrenheit
+		return (@temp * 1.8) + 32
 	end
 
-	def is_hot?(temperature_in_celsius)
-		if temperature_in_celsius >= 40
+	def is_hot?
+		if @temp >= 40
 			"It's hotter than a jalapeno!"
 		else
 			"Seems perfectly fine to me."
 		end
 	end
 
-	def report(temperature_in_celsius)
-		return "The temperature is " + temperature_in_celsius.to_s + " Celsius or " + to_fahrenheit(temperature_in_celsius).to_s + " Fahrenheit."
+	def report
+		return "The temperature is " + @temp.to_s + " Celsius or " + to_fahrenheit.to_s + " Fahrenheit."
 	end
 end
 
@@ -136,28 +136,24 @@ class Celsius
 		@temp = temperature
 	end
 
-	def get_temp
-		@temp
+	def to_fahrenheit
+		return (@temp * 1.8) + 32
 	end
 
-	def to_fahrenheit(temperature_in_celsius)
-		return (temperature_in_celsius * 1.8) + 32
-	end
-
-	def is_hot?(temperature_in_celsius)
-		if temperature_in_celsius >= 40
+	def is_hot?
+		if @temp >= 40
 			"It's hotter than a jalapeno!"
 		else
 			"Seems perfectly fine to me."
 		end
 	end
 
-	def report(temperature_in_celsius)
-		return "The temperature is " + temperature_in_celsius.to_s + " Celsius or " + to_fahrenheit(temperature_in_celsius).to_s + " Fahrenheit."
+	def report
+		return "The temperature is " + @temp.to_s + " Celsius or " + to_fahrenheit.to_s + " Fahrenheit."
 	end
 end
 
 temp_in_room = Celsius.new(22)
-temp_in_room.is_hot?(temp_in_room.get_temp)
+temp_in_room.is_hot?
 
 
