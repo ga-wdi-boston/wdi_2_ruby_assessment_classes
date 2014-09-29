@@ -16,6 +16,8 @@ class Celsius
   end
 end
 
+# Answer is correct.
+
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
 ########################################################
@@ -36,6 +38,8 @@ class Celsius
     (@temperature * 1.8) + 32
   end
 end
+
+# Answer is correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -62,6 +66,8 @@ class Celsius
     @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
   end
 end
+
+# Answer correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -94,7 +100,10 @@ class Celsius
   def report
     "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
   end
+
 end
+
+# Answer correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -107,6 +116,8 @@ end
 
 temp_in_room = Celsius.new(22)
 temp_in_room.is_hot?
+
+# Answer correct.
 
 # ---- New Requirements ---- #
 # Question 2 - the method `to_fahrenheit` does not take any argument
