@@ -33,7 +33,7 @@ class Celsius
     @temperature = temperature
   end
   def to_fahrenheit
-    fahrenheit = (@temperature * 1.8) + 32
+    (@temperature * 1.8) + 32
   end
 end
 
@@ -54,7 +54,7 @@ class Celsius
     @temperature = temperature
   end
   def to_fahrenheit
-    fahrenheit = (@temperature * 1.8) + 32
+    (@temperature * 1.8) + 32
   end
   def is_hot?
     @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
@@ -80,7 +80,7 @@ class Celsius
     @temperature = temperature
   end
   def to_fahrenheit
-    fahrenheit = (@temperature * 1.8) + 32
+    (@temperature * 1.8) + 32
   end
   def is_hot?
     @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
