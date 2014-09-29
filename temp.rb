@@ -76,7 +76,7 @@ class Celsius
 
   def is_hot
     if @temperature >= 40
-      return "It's hotter than a jalapeno!"
+      return "It's hotter than a jalapeno!" #dont need the return
     else
       return "Seems perfectly fine to me"
     end
@@ -126,7 +126,9 @@ class Celsius
   end
 end
 
-binding.pry
+
+# binding.pry
+
 
 
 ########################################################
