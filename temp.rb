@@ -59,7 +59,7 @@ class Celsius
   end
 
   def is_hot?
-    @temperature >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
+    @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
   end
 end
 
@@ -88,11 +88,11 @@ class Celsius
   end
 
   def is_hot?
-    @temperature >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
+    @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
   end
 
   def report
-    puts "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
+    "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
   end
 end
 
@@ -108,6 +108,9 @@ end
 temp_in_room = Celsius.new(22)
 temp_in_room.is_hot?
 
-
-
+# ---- New Requirements ---- #
+# Question 2 - the method `to_fahrenheit` does not take any argument
+# Question 3 - the method `is_hot?` does not take any argument
+# Question 4 - the method `report` does not take any argument
+# no puts anywhere
 
