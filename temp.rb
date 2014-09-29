@@ -10,9 +10,11 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
-
-
-
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+end
 
 
 
@@ -29,9 +31,17 @@ require 'pry'
 
 
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    @temperature_f = (@temperature * 1.8) + 32
+  end
+end
 
-
+# needed to add @ in front of temperature_f
 
 
 ########################################################
@@ -47,9 +57,23 @@ require 'pry'
 # Otherwise, return "Seems perfectly fine to me."
 
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    @temperature_f = (@temperature * 1.8) + 32
+  end
 
-
+  def is_hot?
+    if @temperature >=40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -65,10 +89,29 @@ require 'pry'
 # in Question 2.
 
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    @temperature_f = (@temperature * 1.8) + 32
+  end
 
+  def is_hot?
+    if @temperature >=40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
 
+  def report
+    "The temperature is #{temperature_c} Celsius or #{to_fahrenheit} Fahrenheit."
+  end
+end
 
+# forgot to remove argument passed into to_fahrenheit with second version of quiz
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -81,7 +124,6 @@ require 'pry'
 
 
 
-
-
-
+temp_in_room = Celsius.new(22)
+temp_in_room.is_hot?
 
