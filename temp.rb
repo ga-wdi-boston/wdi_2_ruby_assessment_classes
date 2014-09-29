@@ -103,14 +103,15 @@ class Celsius
     @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me"
   end
 
+# #{self.to_fahrenheit}
   def report
-    t_fahrenheit = to_fahrenheit
-    "The temperature is #{@temperature} Celsius or #{t_fahrenheit} Fahrenheit"
+    # t_fahrenheit = to_fahrenheit
+    "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit"
+    binding.pry
   end
 end
 
-
-
+# gem install pry-nav
 
 
 ########################################################
