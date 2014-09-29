@@ -10,11 +10,10 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
-
-
-
-
-
+class Celsius
+  def initialize(temperature)
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -27,12 +26,14 @@ require 'pry'
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+class Celsius
+  def initialize(temperature)
+  end
 
-
-
-
-
-
+  def to_fahrenheit(celcius_temp)
+    (celcius_temp * 1.8) + 32
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -46,10 +47,18 @@ require 'pry'
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+class Celsius
+  def initialize(temperature)
+  end
 
+  def to_fahrenheit(celcius_temp)
+    (celcius_temp * 1.8) + 32
+  end
 
-
-
+  def is_hot?(celcius_temp)
+    celcius_temp >= 40 ? "It's hotter than a jalapeno" : "Seems perfectly fine to me"
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
