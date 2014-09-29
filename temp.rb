@@ -10,7 +10,11 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
-
+class Celsius
+  def initialize(temp)
+  @temp = temp
+end
+end
 
 
 
@@ -28,6 +32,16 @@ require 'pry'
 # The formula is F = (C * 1.8) + 32
 
 
+class Celsius(temp)
+
+def initialize(temp)
+  @temp = temp
+end
+
+def to_farenheit(temp)
+  @temp = temp
+  F = (temp * 1.8) + 32
+end
 
 
 
@@ -50,6 +64,25 @@ require 'pry'
 
 
 
+class Celsius(temp)
+
+def initialize(temp)
+  @temp = temp
+end
+
+def to_farenheit(temp)
+  @temp = temp
+  F = (temp * 1.8) + 32
+end
+
+def is_hot(temp)
+    if temp >= 40 puts "It's hotter than a jalapeno!"
+    else puts "Seems perfectly fine to me."
+    end
+end
+
+
+
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -66,7 +99,27 @@ require 'pry'
 # in Question 2.
 
 
+class Celsius
 
+def initialize(temp)
+  @temp = temp
+end
+
+def to_farenheit(temp)
+  @temp = temp
+  F = (temp * 1.8) + 32
+end
+
+def is_hot(temp)
+    if temp >= 40 puts "It's hotter than a jalapeno!"
+    else puts "Seems perfectly fine to me."
+    end
+end
+
+def report(temp)
+  attr_accessor :temp
+  puts "The temperature is #{@temp} Celsius or #{@F} Fahrenheit"
+end
 
 
 
