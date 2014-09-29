@@ -10,11 +10,11 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
-
-
-
-
-
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -27,12 +27,14 @@ require 'pry'
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
-
-
-
-
-
-
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+  def to_fahrenheit(celsius)
+    fahrenheit = (celsius * 1.8) + 32
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
