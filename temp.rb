@@ -16,7 +16,7 @@ class Celsius
 	end
 end
 
-
+# Correct
 
 
 
@@ -41,7 +41,7 @@ class Celsius
 	end
 end
 
-
+# Correct
 
 
 
@@ -76,7 +76,8 @@ class Celsius
 	end
 end
 
-
+# should remove the puts but it does ot give an error, so I assume it is correct.
+# Correct
 
 
 ########################################################
@@ -105,7 +106,7 @@ class Celsius
 
 	def is_hot?
 		if @temperature >= 40
-			puts  "It's hotter than a jalapeno!"
+			puts "It's hotter than a jalapeno!"
 		else
 			puts "Seems perfectly fine to me."
 		end
@@ -116,8 +117,8 @@ class Celsius
 	end
 end
 
-
-
+# Correct
+#self.to_fahrenheit will work too, and its being more explicit in calling methods.
 
 
 ########################################################
@@ -132,4 +133,6 @@ end
 temp_in_room = Celsius.new(22)
 temp_in_room.is_hot?
 
+# Correct
+# Score : 5/5
 # Cenk Yurtbilir
