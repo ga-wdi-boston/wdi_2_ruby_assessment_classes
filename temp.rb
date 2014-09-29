@@ -130,7 +130,7 @@ end
 # Call the is_hot? method on that instance. Don't use puts.
 
 temp_in_room = Celsius.new(22)
-temp_in_room.to_fahrenheit
+temp_in_room.to_fahrenheit #=>71.6
 temp_in_room.is_hot? #=> Seems perfectly fine to me.
 temp_in_room.report #=> The temperature is 22 Celsius or 71.6 Fahrenheit.
 
