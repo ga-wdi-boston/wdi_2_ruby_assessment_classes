@@ -10,9 +10,11 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
-
-
-
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+end
 
 
 
@@ -29,9 +31,15 @@ require 'pry'
 
 
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
-
-
+  def to_fahrenheit(temperature_c)
+    temperature_f = (temperature_c * 1.8) + 32
+  end
+end
 
 
 ########################################################
@@ -47,9 +55,23 @@ require 'pry'
 # Otherwise, return "Seems perfectly fine to me."
 
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit(temperature_c)
+    temperature_f = (temperature_c * 1.8) + 32
+  end
 
-
+  def is_hot?(temperature_c)
+    if temperature_c >=40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+end
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -66,8 +88,27 @@ require 'pry'
 # in Question 2.
 
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit(temperature_c)
+    temperature_f = (temperature_c * 1.8) + 32
+  end
 
+  def is_hot?(temperature_c)
+    if temperature_c >=40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+
+  def report(temperature_c)
+    "The temperature is #{temperature_c} Celsius or #{to_fahrenheit(temperature_c)} Fahrenheit."
+  end
+end
 
 
 
@@ -82,6 +123,8 @@ require 'pry'
 
 
 
+temp_in_room = Celsius.new(22)
+temp_in_room.is_hot?(22)
 
 
 
