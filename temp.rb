@@ -10,6 +10,18 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+class Celsius
+  def initialize(temp)
+  @temp = temp
+end
+end
+
+# BOARD ANSWER
+#classes Celsius
+def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+end
 
 
 
@@ -28,6 +40,28 @@ require 'pry'
 # The formula is F = (C * 1.8) + 32
 
 
+class Celsius(temp)
+
+def initialize(temp)
+  @temp = temp
+end
+
+def to_farenheit(temp)
+  @temp = temp
+  F = (temp * 1.8) + 32
+end
+
+#BOARD ANSWER
+classes Celsius
+
+def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+
+def to_fahrenheit
+  @temp_in_f = (@temp_in_c * 1.8) + 32
+end
+end
 
 
 
@@ -50,6 +84,47 @@ require 'pry'
 
 
 
+class Celsius(temp)
+
+def initialize(temp)
+  @temp = temp
+end
+
+def to_farenheit(temp)
+  @temp = temp
+  F = (temp * 1.8) + 32
+end
+
+def is_hot(temp)
+    if temp >= 40 puts "It's hotter than a jalapeno!"
+    else puts "Seems perfectly fine to me."
+    end
+end
+
+
+# BOARD
+# classes Celsius
+
+def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+
+def to_fahrenheit
+  @temp_in_f = (@temp_in_c * 1.8) + 32
+end
+end
+
+def is_hot?
+  if @temp_in_c >=40
+    "It's hotter than a jalapeno"
+  else
+    "Seems perfectly fine to me"
+  end
+end
+end
+
+
+
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -65,7 +140,53 @@ require 'pry'
 # in Question 2.
 
 
+class Celsius
 
+def initialize(temp)
+  @temp = temp
+end
+
+def to_farenheit(temp)
+  @temp = temp
+  F = (temp * 1.8) + 32
+end
+
+def is_hot(temp)
+    if temp >= 40 puts "It's hotter than a jalapeno!"
+    else puts "Seems perfectly fine to me."
+    end
+end
+
+def report(temp)
+  attr_accessor :temp
+  puts "The temperature is #{@temp} Celsius or #{@F} Fahrenheit"
+end
+
+
+ # BOARD ANSWER
+
+  def initialize(temp_in_c)
+@temp_in_c = temp_in_c
+end
+
+def to_fahrenheit
+  @temp_in_f = (@temp_in_c * 1.8) + 32
+end
+end
+
+def is_hot?
+  if @temp_in_c >=40
+    "It's hotter than a jalapeno"
+  else
+    "Seems perfectly fine to me"
+  end
+
+def report
+  "The temperature is #{@temp_in_c} Celsius or #{to_fahrenheit} Fahrenheit.
+  "
+end
+end
+end
 
 
 
@@ -79,7 +200,8 @@ require 'pry'
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
-
+temp_in_room = Celsius(22)
+temp_in_room.is_hot?
 
 
 
