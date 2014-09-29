@@ -130,4 +130,7 @@ class Celsius
 end
 
 temp_in_room = Celsius.new(22)
+# Why not just have is_hot? act on @temperature itself,
+# instead of taking a parameter? Or do we want a reusable
+# instance method for any given temperature?
 temp_in_room.is_hot?(temp_in_room.temperature)
