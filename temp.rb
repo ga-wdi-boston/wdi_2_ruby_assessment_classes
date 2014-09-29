@@ -12,18 +12,6 @@
 
 class Celsius
 
-  # I'm a bit confused on the use of the instance variable.
-  # The questions refer to methods that take a temperature argument,
-  # so I took them literally and assumed we're supposed to
-  # call those methods on the instance of the Celsius class,
-  # and pass in parameters from outside.
-  # However, it feels strange to say something like
-  # temp_in_room.is_hot?(temp_in_room.temperature),
-  # instead of is_hot? simply acting on its instance's @temperature
-  # and just being able to say temp_in_room.is_hot?
-  # Are these methods acting on their parameters,
-  # or on the instance's @temperature instance variable?
-
   def initialize(temperature)
     @temperature = temperature
   end
@@ -44,8 +32,8 @@ class Celsius
   def initialize(temperature)
     @temperature = temperature
   end
-  def to_fahrenheit(temperature)
-    fahrenheit = (temperature * 1.8) + 32
+  def to_fahrenheit
+    fahrenheit = (@temperature * 1.8) + 32
   end
 end
 
@@ -65,11 +53,11 @@ class Celsius
   def initialize(temperature)
     @temperature = temperature
   end
-  def to_fahrenheit(temperature)
-    fahrenheit = (temperature * 1.8) + 32
+  def to_fahrenheit
+    fahrenheit = (@temperature * 1.8) + 32
   end
-  def is_hot?(temperature)
-    temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
+  def is_hot?
+    @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
   end
 end
 
@@ -91,14 +79,14 @@ class Celsius
   def initialize(temperature)
     @temperature = temperature
   end
-  def to_fahrenheit(temperature)
-    fahrenheit = (temperature * 1.8) + 32
+  def to_fahrenheit
+    fahrenheit = (@temperature * 1.8) + 32
   end
-  def is_hot?(temperature)
-    temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
+  def is_hot?
+    @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
   end
-  def report(temperature)
-    "The temperature is #{temperature} Celsius, or #{self.to_fahrenheit(temperature)} Fahrenheit."
+  def report
+    "The temperature is #{@temperature} Celsius, or #{self.to_fahrenheit} Fahrenheit."
   end
 end
 
@@ -111,26 +99,5 @@ end
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
-class Celsius
-  def initialize(temperature)
-    @temperature = temperature
-  end
-  def temperature
-    @temperature
-  end
-  def to_fahrenheit(temperature)
-    fahrenheit = (temperature * 1.8) + 32
-  end
-  def is_hot?(temperature)
-    temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
-  end
-  def report(temperature)
-    "The temperature is #{temperature} Celsius, or #{self.to_fahrenheit(temperature)} Fahrenheit."
-  end
-end
-
 temp_in_room = Celsius.new(22)
-# Why not just have is_hot? act on @temperature itself,
-# instead of taking a parameter? Or do we want a reusable
-# instance method for any given temperature?
-temp_in_room.is_hot?(temp_in_room.temperature)
+temp_in_room.is_hot?
