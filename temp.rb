@@ -10,6 +10,12 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+class Celsius
+
+  def initialize(temperature)
+    @temperature = temperature
+  end
+end
 
 
 
@@ -27,6 +33,17 @@ require 'pry'
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+class Celsius
+    attr_accessor :to_ferenheit
+
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+  def to_ferenheit(temperature)
+    (temperature * 1.8) + 32
+  end
+end
 
 
 
@@ -45,6 +62,25 @@ require 'pry'
 # in Celsius as an argument. If the temperature is more than or equal
 # to 40, the method should return "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
+class Celsius
+  attr_accessor :to_ferenheit, :is_hot?
+
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+  def to_ferenheit(temperature)
+    (temperature * 1.8) + 32
+  end
+
+  def is_hot?(temperature)
+    if temperature >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+end
 
 
 
@@ -65,7 +101,34 @@ require 'pry'
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+class Celsius
+  attr_accessor :to_ferenheit, :is_hot?, :report
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+  def to_ferenheit(temperature)
+    (temperature * 1.8) + 32
+  end
+
+  def is_hot?(temperature)
+    if temperature >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+
+  def report(temperature)
+    celsius = temperature
+    ferenheit = to_ferenheit(temperature)
+
+    "The temperature is #{celsius} Celsius or #{ferenheit} Ferenheit "
+  end
+
+
+end
 
 
 
@@ -82,7 +145,34 @@ require 'pry'
 
 
 
+class Celsius
+  attr_accessor :to_ferenheit, :is_hot?, :report
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_ferenheit(temperature)
+    (temperature * 1.8) + 32
+  end
+
+  def is_hot?(temperature)
+    if temperature >= 40
+      "It's hotter than a jalapeno!"
+    else
+      "Seems perfectly fine to me."
+    end
+  end
+
+  def report(temperature)
+    celsius = temperature
+    ferenheit = to_ferenheit(temperature)
+
+    "The temperature is #{celsius} Celsius or #{ferenheit} Ferenheit "
+  end
+end
+
+temp_in_room = Celsius.new 22
+temp_in_room.is_hot?
 
 
