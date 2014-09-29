@@ -37,9 +37,11 @@ class Celsius
   end
 
   def to_fahrenheit
-    temperature_f = (@temperature * 1.8) + 32
+    @temperature_f = (@temperature * 1.8) + 32
   end
 end
+
+# needed to add @ in front of temperature_f
 
 
 ########################################################
@@ -61,7 +63,7 @@ class Celsius
   end
 
   def to_fahrenheit
-    temperature_f = (@temperature * 1.8) + 32
+    @temperature_f = (@temperature * 1.8) + 32
   end
 
   def is_hot?
@@ -94,7 +96,7 @@ class Celsius
   end
 
   def to_fahrenheit
-    temperature_f = (@temperature * 1.8) + 32
+    @temperature_f = (@temperature * 1.8) + 32
   end
 
   def is_hot?
@@ -106,11 +108,11 @@ class Celsius
   end
 
   def report
-    "The temperature is #{temperature_c} Celsius or #{to_fahrenheit(@temperature)} Fahrenheit."
+    "The temperature is #{temperature_c} Celsius or #{to_fahrenheit} Fahrenheit."
   end
 end
 
-
+# forgot to remove argument passed into to_fahrenheit with second version of quiz
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
