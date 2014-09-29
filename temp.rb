@@ -10,11 +10,13 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+end
 
-
-
-
-
+# Answer is correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -27,12 +29,17 @@ require 'pry'
 # temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    (@temperature * 1.8) + 32
+  end
+end
 
-
-
-
-
+# Answer is correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -46,10 +53,21 @@ require 'pry'
 # "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    (@temperature * 1.8) + 32
+  end
 
+  def is_hot?
+    @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
+  end
+end
 
-
+# Answer correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -64,11 +82,27 @@ require 'pry'
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+class Celsius
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    (@temperature * 1.8) + 32
+  end
 
+  def is_hot?
+    @temperature >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
+  end
 
+  def report
+    "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
+  end
 
+end
+
+# Answer correct.
 
 ########################################################
 # Close your eyes. Take a deep breath. Count to 10.
@@ -79,9 +113,14 @@ require 'pry'
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
+temp_in_room = Celsius.new(22)
+temp_in_room.is_hot?
 
+# Answer correct.
 
-
-
-
+# ---- New Requirements ---- #
+# Question 2 - the method `to_fahrenheit` does not take any argument
+# Question 3 - the method `is_hot?` does not take any argument
+# Question 4 - the method `report` does not take any argument
+# no puts anywhere
 
