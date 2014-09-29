@@ -135,4 +135,9 @@ temp_in_room.is_hot? #=> Seems perfectly fine to me.
 temp_in_room.report #=> The temperature is 22 Celsius or 71.6 Fahrenheit.
 
 
+# —————————————————————————————————————————————————————————————————————— #
+#                                                                        #
+#                       No notes, no pry                                 #
+#                                                                        #
+# —————————————————————————————————————————————————————————————————————— #
 
