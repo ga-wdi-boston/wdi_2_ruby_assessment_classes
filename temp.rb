@@ -10,8 +10,16 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+class Celsius
+
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+end
 
 
+# binding.pry
 
 
 
@@ -27,8 +35,18 @@ require 'pry'
 # temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+class Celsius
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    @fahrenheit = (@temperature * 1.8) + 32
+  end
+end
+
+# binding.pry
 
 
 
@@ -46,9 +64,27 @@ require 'pry'
 # "It's hotter than a jalapeno!"
 # Otherwise, return "Seems perfectly fine to me."
 
+class Celsius
 
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+    @fahrenheit = (@temperature * 1.8) + 32
+  end
 
+  def is_hot
+    if @temperature >= 40
+      return "It's hotter than a jalapeno!" #dont need the return
+    else
+      return "Seems perfectly fine to me"
+    end
+  end
+
+end
+
+# binding.pry
 
 
 ########################################################
@@ -65,8 +101,32 @@ require 'pry'
 # in Question 2.
 
 
+class Celsius
+
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+  def to_fahrenheit
+    @fahrenheit = (@temperature * 1.8) + 32
+  end
+
+  def is_hot
+    if @temperature >= 40
+      return "It's hotter than a jalapeno!"
+    else
+      return "Seems perfectly fine to me"
+    end
+  end
+
+  def report
+    farenheit = to_fahrenheit
+    return "The temperature is #{@temperature} Celsius or #{farenheit} Fahrenheit"
+  end
+end
 
 
+# binding.pry
 
 
 
@@ -79,6 +139,9 @@ require 'pry'
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
+
+temp_in_room = Celsius.new(22)
+temp_in_room.is_hot
 
 
 
