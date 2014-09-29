@@ -10,7 +10,11 @@ require 'pry'
 # class with a given temperature.
 # This class shouldn't contain anything else yet.
 
+def class Celsius
+  def initialize(temperature)
+    @temperature = temperature
 
+end
 
 
 
@@ -27,7 +31,16 @@ require 'pry'
 # in Celsius as an argument, and returns that temperature in Fahrenheit.
 # The formula is F = (C * 1.8) + 32
 
+def class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+   #will need to 'gets' fahrenheit as an input for this to work but that's not in the instructions
+   @temperature = (C * 1.8) + 32
+  end
+end
 
 
 
@@ -47,6 +60,24 @@ require 'pry'
 # Otherwise, return "Seems perfectly fine to me."
 
 
+def class Celsius
+  def initialize(temperature)
+    @temperature = temperature
+  end
+
+  def to_fahrenheit
+   @temperature = (C * 1.8) + 32
+  end
+
+  def is_hot?
+    if @temperature > 40
+      puts "It's hotter than a jalapeno"
+    else
+      puts "Seems perfectly fine to me"
+    end
+  end
+end
+
 
 
 
@@ -65,7 +96,29 @@ require 'pry'
 # This method should use the to_fahrenheit method that you wrote
 # in Question 2.
 
+def class Celsius
+  def initialize
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+   @temperature = (C * 1.8) + 32
+  end
+
+  def is_hot?
+    if celsius > 40
+      puts "It's hotter than a jalapeno"
+    else
+      puts "Seems perfectly fine to me"
+    end
+  end
+
+  def report
+    #need to add input lines of code puts "Enter a temperature in celisius temp = gets .chomp"
+    @temperature = celsius.to_fahrenheit
+    puts "The temperature is #{@temperature} or #{@to_fahrenheit} Fahrenheit."
+  end
+end
 
 
 
@@ -80,7 +133,36 @@ require 'pry'
 # named temp_in_room with temperature 22.
 # Call the is_hot? method on that instance. Don't use puts.
 
+def class Celsius
+  def initialize
+    @temperature = temperature
+  end
 
+  def to_fahrenheit
+   @temperature = (C * 1.8) + 32
+  end
+
+  def is_hot?
+    if celsius > 40
+      puts "It's hotter than a jalapeno"
+    else
+      puts "Seems perfectly fine to me"
+    end
+  end
+
+  def report
+    #need to add input lines of code puts "Enter a temperature in celisius temp = gets .chomp"
+    @temperature = celsius.to_fahrenheit
+    puts "The temperature is #{@temperature} or #{@to_fahrenheit} Fahrenheit."
+  end
+end
+
+
+  @temp_in_room = 22
+  @temp_in_room.is_hot?
+
+
+end
 
 
 
