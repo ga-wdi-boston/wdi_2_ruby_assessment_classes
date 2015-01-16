@@ -22,7 +22,6 @@ class Celsius
   end
 
   def report
-    # @temperature = temperature
-    "The temperature is #{@temperature} degrees Celsius or #{@temperature.to_fahrenheit} Fahrenheit"
+    "The temperature is #{@temperature} Celsius or #{to_fahrenheit} Fahrenheit."
   end
 end
