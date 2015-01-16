@@ -18,8 +18,11 @@ class Celsius
     else
       "Seems perfectly fine to me."
     end
+    # better solution:
+    # @temp >= 40 ? "It's hotter than a jalapeno!" : "Seems perfectly fine to me."
   end
 
+    # calling self is unnecessary/redundant. #{to_fahrenheit} is better.
   def report
     "The temperature is #{num} Celsius or #{self.to_fahrenheit} Fahrenheit."
   end
