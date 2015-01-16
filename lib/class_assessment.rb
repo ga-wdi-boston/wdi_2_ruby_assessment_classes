@@ -1,13 +1,11 @@
 # your code goes here
 class Celsius
   def initialize(temp)
+    @temp = temp
   end
 
-def temp
-  @temp1
-  @temp2
-  @temp3
-  @temp4
+def num
+  @temp
 end
 
 
@@ -16,8 +14,10 @@ def to_fahrenheit
 end
 
 def is_hot?
-  @temp >= 40
+  if @temp >= 40
   "It's hotter than a jalapeno!"
+else "Seems perfectly fine to me."
+end
 end
 
 def report
