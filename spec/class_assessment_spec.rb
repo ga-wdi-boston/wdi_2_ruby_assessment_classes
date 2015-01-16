@@ -6,15 +6,15 @@
 # | _| `._____||_______||__|  |__| /__/     \__\ |__| |__| \__|     \______/__/     \__\ |_______||__|  |__| (__)
 
 
-require 'spec_helper'
-require 'pry'
+require 'spec_helper' #
+require 'pry' # binding.pry
 
 require_relative '../lib/class_assessment'
 
-describe Celsius do
-  
-  before(:all) do
-    @temp1 = Celsius.new(0)
+describe Celsius do # describe the class Celsius
+
+  before(:all) do   # 4 Variables
+    @temp1 = Celsius.new(0) #instance variable - with different numbers
     @temp2 = Celsius.new(-24)
     @temp3 = Celsius.new(40)
     @temp4 = Celsius.new(53)
@@ -28,8 +28,8 @@ describe Celsius do
       expect(@temp3.class).to eq Celsius
       expect(@temp4.class).to eq Celsius
     end
-  end  
-  
+  end
+
   # write a getter method for the instance's number to pass this expectation
   describe 'the instance getter method' do
     it 'gets the instance''s number through a getter method' do
