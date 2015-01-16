@@ -40,7 +40,7 @@ class Celsius
     @temp3 == @temp3
     @temp4 == @temp4
   end
-
+#I thought if I put in the equations to return what the strings say, would be hard coding? When do I hard code vs when do I not?
   def report
     puts @temp1 == @temp1
     puts @temp2 == @temp2
