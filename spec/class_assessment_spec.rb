@@ -87,8 +87,4 @@ describe Celsius do
     end
   end
 
-
-
-
-
 end
