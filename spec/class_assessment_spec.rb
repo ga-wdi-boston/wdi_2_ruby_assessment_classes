@@ -64,6 +64,8 @@ describe Celsius do
       expect(@temp2.is_hot?).to eq "Seems perfectly fine to me."
       expect(@temp3.is_hot?).to eq "It's hotter than a jalapeno!"
       expect(@temp4.is_hot?).to eq "It's hotter than a jalapeno!"
+      # p @temp4.is_hot?
+      p @temp1.is_hot?
     end
   end
 
